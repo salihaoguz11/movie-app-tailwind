@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import avatar from "../assets/icons/avatar.png";
+import { AuthContext } from "../context/AuthContext";
 
 const Navbar = () => {
-  const currentUser = { displayName: "Saliha" };
+  const { currentUser } = useContext(AuthContext);
+  // const currentUser = { displayName: "Saliha" };
   return (
     <div>
       <nav
