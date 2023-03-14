@@ -97,8 +97,6 @@ body {
   min-height: 600px;
 }
 
-/* Login Custom CSS */
-
 .custom-linear-gradient::before {
   background: linear-gradient(0deg, transparent, #ff4b45);
   transform-origin: bottom right;
