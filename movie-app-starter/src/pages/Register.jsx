@@ -10,7 +10,8 @@ const Register = () => {
   const { createUser } = useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
-    createUser(email, password);
+    const displayName = `${firstName} ${lastName}`;
+    createUser(email, password, displayName);
   };
   return (
     <div className="overflow-hidden flex-1 h-screen justify-center items-center bg-[#23242a]">

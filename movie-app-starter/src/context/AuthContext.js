@@ -3,6 +3,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import React, { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -23,14 +24,18 @@ const AuthContextProvider = ({ children }) => {
     userObserver();
   }, []);
 
-  const createUser = async (email, password) => {
+  const createUser = async (email, password, displayName) => {
     try {
       let userCredantial = await createUserWithEmailAndPassword(
         auth,
         email,
         password
       );
+      await updateProfile(auth.currentUser, {
+        displayName: displayName,
+      });
       navigate("/");
+
       toastSuccessNotify("Registered successfully!");
     } catch (error) {
       toastErrorNotify(error.message);
@@ -61,6 +66,7 @@ const AuthContextProvider = ({ children }) => {
       }
     });
   };
+
   const values = {
     createUser,
     logOut,
