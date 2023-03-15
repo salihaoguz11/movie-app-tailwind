@@ -108,6 +108,7 @@ const AuthContextProvider = ({ children }) => {
     signIn,
     currentUser,
     signUpProvider,
+    forgotPassword,
   };
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;
 };
