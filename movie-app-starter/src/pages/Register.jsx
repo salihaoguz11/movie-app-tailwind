@@ -7,7 +7,7 @@ const Register = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { createUser } = useContext(AuthContext);
+  const { createUser, signUpProvider } = useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
     const displayName = `${firstName} ${lastName}`;
@@ -58,6 +58,7 @@ const Register = () => {
             Register
           </button>
           <button
+            onClick={() => signUpProvider()}
             className="flex justify-between text-center btn-danger"
             type="button"
           >
