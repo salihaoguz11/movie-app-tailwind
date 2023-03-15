@@ -6,12 +6,14 @@ import MovieContextProvider from "./context/MovieContext";
 
 const App = () => {
   return (
-    <AuthContextProvider>
-      <MovieContextProvider>
-        <AppRouter />
-        <ToastContainer />
-      </MovieContextProvider>
-    </AuthContextProvider>
+    <div className="dark:bg-gray-dark-main">
+      <AuthContextProvider>
+        <MovieContextProvider>
+          <AppRouter />
+          <ToastContainer />
+        </MovieContextProvider>
+      </AuthContextProvider>
+    </div>
   );
 };
 
