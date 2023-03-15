@@ -35,6 +35,7 @@ const AuthContextProvider = ({ children }) => {
   const logOut = () => {
     signOut(auth);
   };
+
   const values = {
     createUser,
     logOut,
