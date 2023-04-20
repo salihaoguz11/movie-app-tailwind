@@ -48,7 +48,7 @@ SOLUTION
 
 ## Expected Outcome
 
-![Project Snapshot](movie-app.gif)
+![movie-app.gif](movie-app.gif)
 
 ## Objective
 
